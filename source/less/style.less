@@ -1,4 +1,5 @@
 @import url("./blocks/advantages.less");
+@import url("./blocks/global.less");
 @import url("./blocks/features.less");
 @import url("./blocks/main-footer.less");
 @import url("./blocks/main-form.less");
@@ -10,47 +11,8 @@
 @import url("./blocks/search.less");
 @import url("./blocks/social.less");
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+// Viewports
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ptsans.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/ptsansbold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ptsans.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/ptsansbold.woff") format("woff");
-  font-display: swap;
-}
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
