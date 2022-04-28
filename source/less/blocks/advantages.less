@@ -1,7 +1,11 @@
 .advantages {
-  width: 286px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.advantages__wrapper {
+  width: 100%;
 }
 
 .advantages__item {
@@ -9,6 +13,8 @@
 }
 
 .advantages__headline {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   font-style: normal;
   font-weight: 700;
@@ -19,6 +25,8 @@
 }
 
 .advantages__header {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   font-style: normal;
   font-weight: 400;
@@ -31,15 +39,18 @@
 .advantages__content {
   text-align: center;
   color: rgba(255, 255, 255, 1);
-  background-color: #rgba(129, 179, 210, 1);
+  background-color: rgba(129, 179, 210, 1);
 }
 
 .advantages__content--secondary {
+  height: 256px;
   color: rgba(0, 0, 0, 1);
-  background-color: #rgba(238, 238, 238, 1);
+  background-color: rgba(238, 238, 238, 1);
 }
 
 .advantages__title {
+  padding: 0;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -66,4 +77,86 @@
 .advantages__list {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding: 0;
+    margin: 0;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-rows: 256px 330px 256px 256px;
+  }
+
+  .advantages__item--illustration {
+    grid-column: 1 / 4;
+  }
+
+  .advantages__item--features {
+    grid-column: 1 / 4;
+  }
+
+  .advantages__item--singles {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+  }
+
+  .advantages__item--illustration-second {
+    display: grid;
+    grid-template-columns: 256px 512px;
+  }
+
+  .advantages__item--illustration-first {
+    display: grid;
+    grid-template-columns: 512px 256px;
+  }
+
+  .advantages__image--devils-bridge {
+    background-image: url("../img/devils-brige.jpg");
+  }
+
+  .advantages__image--realy-town {
+    background-image: url("../img/realy-town.jpg");
+  }
+
+  .advantages__headline {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .advantages__header {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .advantages__title {
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item--singles {
+    grid-template-columns: 400px 400px 400px;
+  }
+
+  .advantages__item--illustration-first {
+    grid-template-columns: 800px 400px;
+  }
+
+  .advantages__item--illustration-second {
+    grid-template-columns: 400px 800px;
+  }
+
+  .advantages__image--devils-bridge {
+    background-image: url("../img/devils-brige-desc.jpg");
+  }
+
+  .advantages__image--realy-town {
+    background-image: url("../img/realy-town-desc.jpg");
+  }
 }

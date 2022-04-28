@@ -26,3 +26,23 @@
   text-transform: uppercase;
   color: rgba(51, 51, 51, 1);
 }
+
+@media (min-width: @tablet-width) {
+  .features {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+  }
+
+  .features__title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    margin: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    grid-template-columns: 400px 400px 400px;
+  }
+}

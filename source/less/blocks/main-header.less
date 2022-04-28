@@ -1,5 +1,28 @@
 .main-header {
-  width: 286px;
+  display: flex;
+  position: relative;
+  justify-content: right;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-header__logo {
+  display: block;
+  position: absolute;
+  right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logo {
+    right: 292px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logo {
+    right: 508px;
+  }
 }

@@ -1,19 +1,23 @@
-.preview__title {
-  text-align: center;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #000000;
+.preview {
+  width: 320px;
+  height: 389px;
+  background-image: url("../img/preview-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.preview__subtitle {
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #333333;
+@media (min-width: @tablet-width) {
+  .preview {
+    background-image: url("../img/preview-tab.jpg");
+    width: 768px;
+    height: 518px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .preview {
+    background-image: url("../img/preview-desc.jpg");
+    width: 1200px;
+    height: 518px;
+  }
 }
