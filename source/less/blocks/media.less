@@ -17,6 +17,7 @@
 
 .media__list {
   padding: 0;
+  margin: auto;
 }
 
 .media__text {
@@ -84,4 +85,110 @@
   background-repeat: no-repeat;
   width: 280px;
   height: 280px;
+}
+
+.media__video {
+  background-image: url("../img/video-mobile.jpg");
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 177px;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .media__list {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    margin: 0 60px 0 60px;
+  }
+
+  .media__item--large-format {
+    grid-column: 1 / 3;
+  }
+
+  .media__image--large-format {
+    background-image: url("../img/photo1-tab.jpg");
+    background-repeat: no-repeat;
+    width: 648px;
+    height: 480px;
+}
+
+  .media__image--image2 {
+    background-image: url("../img/photo2-tab.jpg");
+    background-repeat: no-repeat;
+    width: 324px;
+    height: 267px;
+  }
+
+  .media__image--image3 {
+    background-image: url("../img/photo3-tab.jpg");
+    background-repeat: no-repeat;
+    width: 324px;
+    height: 267px;
+  }
+
+  .media__image--image4 {
+    background-image: url("../img/photo4-tab.jpg");
+    background-repeat: no-repeat;
+    width: 324px;
+    height: 267px;
+  }
+
+  .media__meta-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .media__video {
+    background-image: url("../img/video-tab.jpg");
+    background-repeat: no-repeat;
+    width: 648px;
+    height: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .media__list {
+    grid-template-columns: 400px 400px 400px;
+    margin: 0;
+  }
+
+  .media__image--large-format {
+    background-image: url("../img/photo1-desk.jpg");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 400px;
+}
+
+  .media__item--large-format {
+  grid-column: 1 / 4;
+  }
+
+  .media__image--image2 {
+    background-image: url("../img/photo2-desk.jpg");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 267px;
+  }
+
+  .media__image--image3 {
+    background-image: url("../img/photo3-desk.jpg");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 267px;
+  }
+
+  .media__image--image4 {
+    background-image: url("../img/photo4-desk.jpg");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 267px;
+  }
+
+  .media__video {
+    background-image: url("../img/video-desk.jpg");
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 500px;
+  }
 }
