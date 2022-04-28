@@ -1,0 +1,45 @@
+.preview-form__image {
+  display: block;
+  background-image: url("../img/preview-form.jpg");
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 158px;
+}
+
+.preview-form__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.preview-form__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .preview-form__image {
+    display: block;
+    background-image: url("../img/preview-form-tab.jpg");
+    background-repeat: no-repeat;
+    width: 768px;
+    height: 290px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .preview-form__image {
+    display: block;
+    background-image: url("../img/preview-form-desc.jpg");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 301px;
+  }
+}
