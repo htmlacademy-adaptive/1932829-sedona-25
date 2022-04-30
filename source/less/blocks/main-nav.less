@@ -1,12 +1,13 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   width: 100%;
+  position: relative;
+  bottom:126px;
 }
 
-
 .main-nav__link {
+  display: block;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(129, 179, 210, 1);
   font-family: "PT Sans", sans-serif;
@@ -15,6 +16,11 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding: 17px 20px 12px 20px;
+  box-sizing: border-box;
 }
 
 .main-nav__list {
@@ -30,6 +36,7 @@
   padding: 0;
   border: 0;
   width: 23px;
+  margin-left: auto;
 }
 
 @media (min-width: @tablet-width) {
