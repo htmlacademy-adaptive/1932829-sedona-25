@@ -1,16 +1,17 @@
 .preview {
-  width: 320px;
   height: 389px;
   background-image: url("../img/preview-mobile.jpg");
-  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
 }
 
 @media (min-width: @tablet-width) {
   .preview {
     background-image: url("../img/preview-tab.jpg");
-    width: 768px;
+    width: 100%;
     height: 518px;
+    background-size: cover;
   }
 }
 

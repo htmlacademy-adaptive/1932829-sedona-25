@@ -1,8 +1,10 @@
 .main-footer {
   text-align: center;
+  padding: 28px 20px 23px 20px;
 }
 
 .main-footer__hashtag {
+  margin: 33px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -20,6 +22,13 @@
   line-height: 21px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+.main-footer__footer-logo {
+  position: relative;
+  margin-left: 10px;
+  top: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,6 +42,13 @@
 
 @media (min-width: @desktop-width) {
   .main-footer {
+    width: 1200px;
     padding: 36px 100px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  .main-footer__hashtag {
+    margin-top: 12px;
   }
 }

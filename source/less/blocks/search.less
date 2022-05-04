@@ -1,5 +1,6 @@
 .search {
   text-align: center;
+  padding: 38px 18px 49px 18px;
 }
 
 .search__title {
@@ -23,6 +24,9 @@
 }
 
 .search__button {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -31,16 +35,24 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(129, 179, 210, 1);
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
   .search {
-    height: 318px;
+    width: 458px;
+    margin: 61px auto 58px auto;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .search__title {
     font-weight: 700;
     font-size: 30px;
     line-height: 26px;
+  }
+
+  .search__subtitle {
+    margin-bottom: 54px;
   }
 }
