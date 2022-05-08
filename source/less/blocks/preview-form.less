@@ -38,9 +38,23 @@
   .preview-form {
     margin-bottom: 102px;
   }
+
+  .preview-form__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .preview-form__subtitle {
+    width: 435px;
+    margin: auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .preview-form {
+    margin: auto auto 66px auto;
+  }
+
   .preview-form__image {
     display: block;
     background-image: url("../img/preview-form-desc.jpg");
@@ -48,5 +62,9 @@
     width: 1200px;
     height: 301px;
     margin: auto;
+  }
+
+  .preview-form__title {
+    margin-top: 115px;
   }
 }
