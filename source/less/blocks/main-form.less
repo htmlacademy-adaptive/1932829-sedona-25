@@ -1,3 +1,8 @@
+.main-form {
+  width: 87.5%;
+  margin: auto;
+}
+
 .main-form__name-item {
   list-style: none;
 }
@@ -7,23 +12,33 @@
 }
 
 .main-form__name-item input {
+  width: 100%;
+  padding: 16px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(242, 242, 242, 1);
-  border-style: none;
+  border: none;
+  box-sizing: border-box;
 }
 
 .main-form__contact-item input {
+  width: 100%;
+  padding: 16px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
   background-color: rgba(242, 242, 242, 1);
-  border-style: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.main-form__contact-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .main-form__item {
@@ -50,7 +65,18 @@
   border-style: none;
 }
 
+.main-form__impression label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.main-form__place label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .main-form__send {
+  display: block;
+  margin: auto;
+  padding: 18px 34px 13px 32px;
   text-align: center;
   font-style: normal;
   font-weight: 700;
@@ -69,11 +95,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
-}
-
-.main-form__wrapper {
-  margin: 0 20px;
-  box-sizing: border-box;
+  text-align: right;
 }
 
 .main-form__name-list {
@@ -87,6 +109,7 @@
 }
 
 .main-form__name-item label {
+  padding-left: 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -96,6 +119,7 @@
 }
 
 .main-form__contact-item label {
+  padding-left: 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -114,33 +138,70 @@
 }
 
 .main-form__textarea {
+  padding: 0;
+  width: 100%;
   background-color: rgba(242, 242, 242, 1);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+  border-style: none;
+}
+
+.main-form__send-wrapper {
+  display: block;
+  margin-top: 56px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
+  .main-form {
+    margin: auto auto 64px auto;
+  }
+
+  .main-form__wrapper {
+    margin: 0;
+  }
+
   .main-form__title {
     font-size: 21px;
+    margin: 0 0 28px 0;
   }
 
   .main-form__container {
     display: flex;
     justify-content: space-between;
-    width: 648px;
-    margin: 0 auto 0 auto;
+    margin: auto auto 48px auto;
+    width: 100%;
+  }
+
+  .main-form__container .main-form__item {
+    width: 43%;
   }
 
   .main-form__impression {
     display: grid;
-    grid-template-columns: 280px 280px;
-    width: 575px;
-    margin: 0 auto 0 auto;
+    grid-template-columns: 1fr 1fr;
+    width: 88%;
+    margin: 0 auto 48px auto;
   }
 
   .main-form__place {
     display: grid;
-    grid-template-columns: 280px 280px;
-    width: 575px;
-    margin: 0 auto 0 auto;
+    grid-template-columns: 1fr 1fr;
+    width: 74%;
+    margin: 0 auto 42px auto;
+  }
+
+  .main-form__textarea {
+    height: 160px;
+    margin-bottom: 48px;
+  }
+
+  .main-form__notes {
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .main-form__title-center {
@@ -150,8 +211,12 @@
   .main-form__send-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 575px;
+    width: 100%;
     margin: 0 auto 0 auto;
+  }
+
+  .main-form__send {
+    margin: 0;
   }
 }
 
@@ -159,11 +224,13 @@
   .main-form__container {
     width: 960px;
     grid-template-columns: 480px 480px;
+    margin-bottom: 56px;
   }
 
   .main-form__impression {
     width: 960px;
     grid-template-columns: 320px 320px 320px;
+    margin-bottom: 56px;
 
     .main-form__title-center {
       grid-column: 1 / 4;
@@ -173,6 +240,7 @@
   .main-form__place {
     width: 960px;
     grid-template-columns: 240px 240px 240px 240px;
+    margin-bottom: 56px;
 
     .main-form__title-center {
       grid-column: 1 / 5;
@@ -180,10 +248,13 @@
   }
 
   .main-form__textarea {
-    width: 768px;
+    display: block;
+    width: 64%;
+    margin: auto auto 48px auto;
   }
 
   .main-form__send-wrapper {
-    width: 768px;
+    width: 64%;
+    margin: auto;
   }
 }

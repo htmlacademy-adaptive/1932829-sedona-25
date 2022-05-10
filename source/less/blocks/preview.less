@@ -1,16 +1,43 @@
 .preview {
-  width: 320px;
   height: 389px;
   background-image: url("../img/preview-mobile.jpg");
-  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.preview__lettering {
+  display: block;
+  background-image: url("../img/lettering-mobile.png");
+  width: 282px;
+  height: 214px;
+  background-repeat: no-repeat;
+  margin: 90px auto auto auto;
+  z-index: 2;
+}
+
+.preview::before {
+  display: block;
+  content: "";
+  overflow: hidden;
 }
 
 @media (min-width: @tablet-width) {
   .preview {
     background-image: url("../img/preview-tab.jpg");
-    width: 768px;
+    width: 100%;
     height: 518px;
+    background-size: cover;
+  }
+
+  .preview__lettering {
+    display: block;
+    background-image: url("../img/lettering.png");
+    width: 461px;
+    height: 350px;
+    background-repeat: no-repeat;
+    margin: 77px auto auto auto;
+    z-index: 2;
   }
 }
 
