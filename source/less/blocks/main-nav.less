@@ -37,6 +37,10 @@
     inset 0  1px 0 rgba(255, 255, 255, 0.2);
 }
 
+.main-nav__shadow {
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .main-nav--closed .main-nav__toggle {
   position: absolute;
   left: 297px;
@@ -70,7 +74,6 @@
   .main-nav {
     display: flex;
     align-items: stretch;
-    padding-top: 18px;
   }
 
   .main-nav__wrapper {
@@ -105,5 +108,9 @@
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__last-item {
+    box-shadow: none;
   }
 }
