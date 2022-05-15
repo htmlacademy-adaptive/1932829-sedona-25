@@ -41,17 +41,26 @@
 }
 
 .advantages__image--realy-town {
-  background-image: url("../img/realy-town.jpg");
+  background-image: url("../img/really-town-mobile.jpg");
   height: 260px;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/really-town-mobile-x2.jpg");
+  }
 }
 
 .advantages__image--devils-bridge {
-  background-image: url("../img/devils-brige.jpg");
+  background-image: url("../img/devils-brige-mobile.jpg");
   height: 260px;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/devils-brige-mobile-x2.jpg");
+  }
 }
 
 
@@ -165,15 +174,24 @@
   }
 
   .advantages__image--devils-bridge {
-    background-image: url("../img/devils-brige-tab.jpg");
+    background-image: url("../img/devils-brige.jpg");
     background-size: cover;
     height: 256px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/devils-brige-x2.jpg");
+    }
   }
 
   .advantages__image--realy-town {
-    background-image: url("../img/realy-town-tab.jpg");
+    background-image: url("../img/really-town.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     height: 256px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/really-town-x2.jpg");
+    }
   }
 
   .advantages__headline {
@@ -226,10 +244,10 @@
   }
 
   .advantages__image--devils-bridge {
-    background-image: url("../img/devils-brige-desc.jpg");
+    background-image: url("../img/devils-brige.jpg");
   }
 
   .advantages__image--realy-town {
-    background-image: url("../img/realy-town-desc.jpg");
+    background-image: url("../img/really-town.jpg");
   }
 }

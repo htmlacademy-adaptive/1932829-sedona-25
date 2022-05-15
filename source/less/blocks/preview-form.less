@@ -1,9 +1,14 @@
 .preview-form__image {
   display: block;
-  background-image: url("../img/preview-form.jpg");
+  background-image: url("../img/preview-mobile.jpg");
   background-repeat: no-repeat;
-  width: 320px;
+  background-size: cover;
+  width: 100%;
   height: 158px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/preview-mobile-x2.jpg");
+  }
 }
 
 .preview-form__title {
@@ -28,11 +33,16 @@
   .preview-form__image {
     display: block;
     margin-bottom: 64px;
-    background-image: url("../img/preview-form-tab.jpg");
+    background-image: url("../img/preview.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: 50% 100%;
+    background-size: auto;
     width: 100%;
     height: 290px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/preview-x2.jpg");
+    }
   }
 
   .preview-form {
@@ -57,7 +67,7 @@
 
   .preview-form__image {
     display: block;
-    background-image: url("../img/preview-form-desc.jpg");
+    background-image: url("../img/preview.jpg");
     background-repeat: no-repeat;
     width: 1200px;
     height: 301px;
