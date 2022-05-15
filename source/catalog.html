@@ -12,13 +12,8 @@
     <a class="main-header__logo">
       <img class="main-header__image" src="img/logo.png" width="185" height="96" alt="Логотип сайта «Седона»">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
-        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
-          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
-          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
-          </svg>
         <span class="visually-hidden">Кнопка меню</span>
       </button>
       <div class="main-nav__wrapper">
@@ -51,7 +46,11 @@
       <ul class="media__list">
         <li class="media__item media__item--large-format">
           <div class="media__image media__image--large-format">
-            <img src="img/photo1.jpg" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo1-desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo1-tab.jpg, img/photo1-tab-2x.jpg">
+              <img src="img/photo1-mobile.jpg" srcset="img/photo1-mobile-x2.jpg" width="100%" height="100%">
+            </picture>
           </div>
           <div class="media__meta-wrapper">
             <div class="media__autor-wrapper">
@@ -68,7 +67,11 @@
         </li>
         <li class="media__item">
           <div class="media__image media__image--image2">
-            <img src="img/photo2.jpg" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo2-desk.jpg, img/photo2-desk-x2.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo2-tab.jpg, img/photo2-tab-2x.jpg">
+              <img src="img/photo2-mobile.jpg" srcset="img/photo2-mobile-x2.jpg" width="100%" height="100%">
+            </picture>
           </div>
           <div class="media__meta-wrapper">
             <div class="media__autor-wrapper">
@@ -85,7 +88,11 @@
         </li>
         <li class="media__item">
           <div class="media__image media__image--image3">
-            <img src="img/photo3.jpg" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo3-desk.jpg, img/photo3-desk-x2.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo3-tab.jpg, img/photo3-tab-2x.jpg">
+              <img src="img/photo3-mobile.jpg" srcset="img/photo3-mobile-x2.jpg" width="100%" height="100%">
+            </picture>
           </div>
           <div class="media__meta-wrapper">
             <div class="media__autor-wrapper">
@@ -102,7 +109,11 @@
         </li>
         <li class="media__item">
           <div class="media__image media__image--image4">
-            <img src="img/photo4.jpg" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo4-desk.jpg, img/photo4-desk-x2.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo4-tab.jpg, img/photo4-tab-2x.jpg">
+              <img src="img/photo4-mobile.jpg" srcset="img/photo4-mobile-x2.jpg" width="100%" height="100%">
+            </picture>
           </div>
           <div class="media__meta-wrapper">
             <div class="media__autor-wrapper">
@@ -120,7 +131,13 @@
       </ul>
       <h2 class="media__tagline">Все еще сомневаетесь?</h2>
       <p class="media__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <div class="media__video"></div>
+      <div class="media__video">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/video-desk.jpg, img/video-desk-2x.jpg">
+          <source media="(min-width: 768px)" srcset="img/video-tab.jpg, img/video-tab-2x.jpg">
+          <img src="video-mobile.jpg" srcset="img/video-mobile-x2.jpg" width="100%" height="100%">
+        </picture>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
