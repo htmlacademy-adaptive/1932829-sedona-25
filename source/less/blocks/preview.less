@@ -1,9 +1,20 @@
 .preview {
   height: 389px;
   background-image: url("../img/preview-mobile.jpg");
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/preview-mobile-2x.jpg");
+  }
+}
+
+.preview::before {
+  display: block;
+  content: "";
+  overflow: hidden;
 }
 
 .preview__lettering {
@@ -16,19 +27,21 @@
   z-index: 2;
 }
 
-.preview::before {
-  display: block;
-  content: "";
-  overflow: hidden;
+.preview__catalog {
+  height: 158px;
 }
 
 @media (min-width: @tablet-width) {
   .preview {
-    background-image: url("../img/preview-tab.jpg");
+    background-image: url("../img/preview.jpg");
     background-position: 50% 100%;
     width: 100%;
-    height: 290px;
+    height: 518px;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/preview-2x.jpg");
+    }
   }
 
   .preview__lettering {
@@ -40,13 +53,25 @@
     margin: 77px auto auto auto;
     z-index: 2;
   }
+
+  .preview__catalog {
+    background-size: auto;
+    height: 290px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
   .preview {
-    background-image: url("../img/preview-desc.jpg");
+    background-image: url("../img/preview-2x.jpg");
     background-position: 50% 100%;
     width: 1200px;
+    height: 518px;
+  }
+
+  .preview__catalog {
+    background-size: auto;
     height: 301px;
   }
+
 }
