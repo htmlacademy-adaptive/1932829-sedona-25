@@ -1,14 +1,22 @@
 .preview {
+  position: relative;
   height: 389px;
   background-image: url("../img/preview-mobile.jpg");
+  background-color: rgba(125, 129, 138, 1);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
+  z-index: 0;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/preview-mobile-x2.jpg");
   }
+}
+
+.vector-lettering {
+  width: 100%;
+  height: 100%;
 }
 
 .preview::before {
@@ -19,7 +27,6 @@
 
 .preview__lettering {
   display: block;
-  background-image: url("../img/lettering-mobile.png");
   width: 282px;
   height: 214px;
   background-repeat: no-repeat;
@@ -27,8 +34,34 @@
   z-index: 2;
 }
 
+.preview__lettering--inner {
+  display: block;
+  width: 282px;
+  background-repeat: no-repeat;
+  margin: 56px auto auto auto;
+}
+
 .preview__catalog {
+  position: relative;
   height: 158px;
+}
+
+.preview-catalog__decor {
+  height: 56px;
+  display: block;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.preview__decor {
+  height: 56px;
+  display: block;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 @media (min-width: @tablet-width) {
@@ -46,12 +79,16 @@
 
   .preview__lettering {
     display: block;
-    background-image: url("../img/lettering.png");
     width: 461px;
     height: 350px;
     background-repeat: no-repeat;
     margin: 77px auto auto auto;
     z-index: 2;
+  }
+
+  .preview__lettering--inner {
+    width: 457px;
+    margin-top: 95px;
   }
 
   .preview__catalog {

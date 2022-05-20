@@ -10,14 +10,22 @@
 .main-header__logo {
   display: block;
   text-align: center;
+  width: 185px;
+  height: 96px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0);
+  z-index:2;
+}
+
+.main-header__logo--vector {
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0)
 }
 
 @media (min-width: @desktop-width) {
   .main-header {
     width: 1200px;
-  }
-
-  .main-header__logo {
-    right: 508px;
   }
 }

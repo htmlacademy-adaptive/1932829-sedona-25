@@ -3,12 +3,101 @@
   margin: auto;
 }
 
+.form-separator {
+  display: block;
+  position: relative;
+  right: 50px;
+}
+
 .main-form__name-item {
   list-style: none;
 }
 
+.control {
+  position: relative;
+  display: block;
+  height: 46px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark{
+  background-color: rgba(229, 229, 229, 1);;
+}
+
+.control:active .control-mark{
+  background-color: rgba(213, 213, 213, 1);
+}
+
+.control:active .control-mark::before{
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 13px;
+  left: 11px;
+  background-image: url(../img/tick.svg);
+  width: 22px;
+  height: 16px;
+  content: "";
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 15px;
+  left:15px;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(51, 51, 51, 1);
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input {
+  margin-left: 80px;
+}
+
+.control::before {
+  display: block;
+  content: "";
+  overflow: hidden;
+}
+
+.control-label {
+  display: block;
+  margin-left: 62px;
+  margin-top: 10px;
+}
+
 .main-form__contact-item {
   list-style: none;
+  position: relative;
+}
+
+.main-form__contact-item-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 21px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #E6E6E6;
 }
 
 .main-form__name-item input {
@@ -24,6 +113,14 @@
   box-sizing: border-box;
 }
 
+.main-form__name-item input:hover {
+  background-color: rgba(229, 229, 229, 1);
+}
+
+.main-form__name-item input:active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .main-form__contact-item input {
   width: 100%;
   padding: 16px;
@@ -35,6 +132,14 @@
   background-color: rgba(242, 242, 242, 1);
   border: none;
   box-sizing: border-box;
+}
+
+.main-form__contact-item input:hover {
+  background-color: rgba(229, 229, 229, 1);
+}
+
+.main-form__contact-item input:active {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .main-form__contact-item:not(:last-child) {
@@ -160,8 +265,24 @@
     margin: auto auto 64px auto;
   }
 
+  .form-separator {
+    display: none;
+  }
+
   .main-form__wrapper {
+    position: relative;
     margin: 0;
+  }
+
+  .main-form__container::after {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    content: '';
+    display: block;
+    height: 291px;
+    background: #DBDBDB;
+    width: 1px;
   }
 
   .main-form__title {
@@ -183,15 +304,13 @@
   .main-form__impression {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 88%;
-    margin: 0 auto 48px auto;
+    padding: 0 0 48px 0;
   }
 
   .main-form__place {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 74%;
-    margin: 0 auto 42px auto;
+    margin: 0 0 42px 0;
   }
 
   .main-form__textarea {
@@ -218,18 +337,43 @@
   .main-form__send {
     margin: 0;
   }
+
+  .main-form__item {
+    position: relative;
+  }
+
+  .main-form__title--decor::before {
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    content: '';
+    display: block;
+    height: 1px;
+    background: #DBDBDB;
+    width: 123px;
+  }
+
+  .main-form__title--decor::after {
+    position: absolute;
+    right: 0;
+    top: 0.5em;
+    content: '';
+    display: block;
+    height: 1px;
+    background: #DBDBDB;
+    width: 123px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-form__container {
-    width: 960px;
     grid-template-columns: 480px 480px;
     margin-bottom: 56px;
   }
 
   .main-form__impression {
-    width: 960px;
-    grid-template-columns: 320px 320px 320px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 56px;
 
     .main-form__title-center {
@@ -238,13 +382,20 @@
   }
 
   .main-form__place {
-    width: 960px;
-    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 56px;
 
     .main-form__title-center {
       grid-column: 1 / 5;
     }
+  }
+
+  .main-form__title--decor::after {
+    width: 280px;
+  }
+
+  .main-form__title--decor::before {
+    width: 280px;
   }
 
   .main-form__textarea {

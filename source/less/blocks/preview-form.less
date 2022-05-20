@@ -1,6 +1,17 @@
+.preview-form {
+  position: relatives;
+}
+
+.preview-form__image::before {
+  display: block;
+  content: "";
+  overflow: hidden;
+}
+
 .preview-form__image {
   display: block;
   background-image: url("../img/preview-mobile.jpg");
+  background-color: rgba(125, 129, 138, 1);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -9,6 +20,15 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/preview-mobile-x2.jpg");
   }
+}
+
+.preview-form__decor {
+  display: block;
+  height: 56px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 .preview-form__title {
@@ -49,6 +69,11 @@
     margin-bottom: 102px;
   }
 
+  .preview-form__decor {
+    transform: translate(-50%, 0%);
+    top: 290px;
+  }
+
   .preview-form__title {
     font-size: 30px;
     line-height: 26px;
@@ -63,6 +88,10 @@
 @media (min-width: @desktop-width) {
   .preview-form {
     margin: auto auto 66px auto;
+  }
+
+  .preview-form__decor {
+    top: 300px;
   }
 
   .preview-form__image {
