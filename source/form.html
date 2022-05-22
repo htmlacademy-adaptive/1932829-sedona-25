@@ -128,12 +128,12 @@
 </svg>
 <div class="wrapper">
 <header class="main-header">
-  <a class="main-header__logo">
+  <a class="main-header__logo" href="index.html">
     <svg width="185" height="96" viewBox="0 0 185 96" fill="none" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="#logo-main"></use>
     </svg>
   </a>
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Кнопка меню</span>
       </button>
@@ -161,14 +161,14 @@
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <section class="preview-form">
       <span class="preview-form__image">
-        <span class="preview__lettering--inner">
+        <span class="preview-form__lettering-inner">
           <svg class="vector-lettering" width="457" height="78" viewBox="0 0 457 78" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#vector-lettering-inner"></use>
             </svg>
         </span>
       </span>
       <span class="preview-form__decor">
-        <svg class="preview__decor-vector" width="1200" height="57" viewBox="0 0 1200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="preview-form__decor-vector" width="1200" height="57" viewBox="0 0 1200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#preview-decor"></use>
         </svg>
       </span>
@@ -188,15 +188,15 @@
             <ul class="main-form__name-list">
               <li class="main-form__name-item">
                 <label for="name">ИМЯ*:</label>
-                <input type="text" id="name" name="user_name" value="Пётр">
+                <input type="text" id="name" name="user_name" placeholder="Имя" value="Пётр">
               </li>
               <li class="main-form__name-item">
                 <label for="surname">ФАМИЛИЯ*:</label>
-                <input type="text" id="surname" name="user_surname" value="Пустота">
+                <input type="text" id="surname" name="user_surname" placeholder="Фамилия" value="Пустота">
               </li>
               <li class="main-form__name-item">
                 <label for="patronymic">Отчество:</label>
-                <input type="text" id="patronymic" name="user_patronymic" value="Викторович">
+                <input type="text" id="patronymic" name="user_patronymic" placeholder="Отчество" value="Викторович">
               </li>
             </ul>
           </fieldset>
@@ -205,26 +205,31 @@
               <use xlink:href="#vector-separator"></use>
             </svg>
             </span>
+          <span class="vertical-separator"></span>
           <fieldset class="main-form__item">
             <p class="main-form__title">Контактная информация</p>
             <ul class="main-form__contact-list">
               <li class="main-form__contact-item main-form__contact-item">
                 <label for="phone">Контактный телефон*:</label>
-                <input type="tel" id="phone" name="phone" value="Введите телефон">
-                <span class="main-form__contact-item-logo">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#logo-phone"></use>
+                <div class="main-form__input-wrapper">
+                  <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+                  <span class="main-form__contact-item-logo">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#logo-phone"></use>
                     </svg>
-                </span>
+                  </span>
+                </div>
               </li>
               <li class="main-form__contact-item main-form__contact-item">
                 <label for="mail">Электронная почта*:</label>
-                <input type="email" id="mail" name="user_mail" value="Введите e-mail">
-                <span class="main-form__contact-item-logo">
-                  <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#logo-mail"></use>
+                <div class="main-form__input-wrapper">
+                  <input type="email" id="mail" name="user_mail" placeholder="Введите e-mail">
+                  <span class="main-form__contact-item-logo">
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#logo-mail"></use>
                     </svg>
-                </span>
+                  </span>
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -235,7 +240,7 @@
           </svg>
           </span>
         <fieldset class="main-form__item main-form__impression">
-          <p class="main-form__title main-form__title-center main-form__title--decor">Ваше Общее впечатление:</p>
+          <div class="main-form__title-center"><p class="main-form__title main-form__title--decor">Ваше Общее впечатление:</p></div>
           <label class="control" for="checkbox1">
             <input class="visually-hidden control-input" id="checkbox1" name="impression" type="radio" value="positive" checked>
             <span class="control-mark"></span>
@@ -258,7 +263,7 @@
           </svg>
           </span>
         <fieldset class="main-form__item main-form__place">
-          <p class="main-form__title main-form__title-center main-form__title--decor">Посещенные достопримечательности:</p>
+          <div class="main-form__title-center"><p class="main-form__title main-form__title--decor">Посещенные достопримечательности:</p></div>
           <label class="control" for="radio1">
             <input  class="visually-hidden control-input" id="radio1" name="place" type="checkbox" value="Devil's Bridge" checked>
             <span class="control-mark"></span>
@@ -286,7 +291,7 @@
           </svg>
           </span>
         <fieldset class="main-form__item">
-          <p class="main-form__title main-form__title--decor">Опишите свои эмоции:</p>
+          <div class="main-form__title-center"><p class="main-form__title main-form__title--decor">Опишите свои эмоции:</p></div>
           <textarea class="main-form__textarea" rows="4" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
       </div>
