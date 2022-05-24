@@ -43,3 +43,7 @@ const watcher = () => {
 export default gulp.series(
   styles, server, watcher
 );
+
+export const build = gulp.series(
+  styles
+);
