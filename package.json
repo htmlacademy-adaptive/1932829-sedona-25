@@ -7,6 +7,7 @@
     "autoprefixer": "10.4.0",
     "browser-sync": "2.27.7",
     "csso": "^5.0.3",
+    "del": "^6.1.0",
     "gulp": "4.0.2",
     "gulp-html-minifier": "^0.1.8",
     "gulp-less": "5.0.0",
