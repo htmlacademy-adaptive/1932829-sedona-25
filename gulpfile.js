@@ -44,14 +44,14 @@ const server = (done) => {
 //HTML
 
 export const html = () => {
-  return gulp.src('sourse/*.html')
+  return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
 //IMAGES
 export const images = () => {
-  return gulp.src('sourse/img/**/*{jpg,png}')
+  return gulp.src('source/img/**/*{jpg,png}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
   }
@@ -59,7 +59,7 @@ export const images = () => {
 
 //WebP
 export const createWebp = () => {
-  return gulp.src('sourse/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {},
   }))
@@ -68,9 +68,9 @@ export const createWebp = () => {
 
 //SVG
 const svg = (done) => {
-  gulp.src('sourse/img/**/*.svg')
+  gulp.src('source/img/**/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('build.img'))
+    .pipe(gulp.dest('build/img'))
     done()
 }
 

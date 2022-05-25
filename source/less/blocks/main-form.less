@@ -195,6 +195,7 @@ textarea::placeholder {
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
   border-style: none;
+  margin-bottom: 13px;
 }
 
 .main-form__impression label:not(:last-child) {
@@ -228,16 +229,17 @@ textarea::placeholder {
   text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
   text-align: right;
+  margin-top: 5px;
 }
 
 .main-form__name-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px 0;
 }
 
 .main-form__contact-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 19px 0;
 }
 
 .main-form__name-item label {
@@ -273,6 +275,7 @@ textarea::placeholder {
   text-align: center;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  margin-top: 20px;
 }
 
 .main-form__textarea {
@@ -290,8 +293,12 @@ textarea::placeholder {
 
 .main-form__send-wrapper {
   display: block;
-  margin-top: 56px;
+  margin-top: 66px;
   width: 100%;
+}
+
+.main-form__place {
+  margin-bottom: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -322,7 +329,7 @@ textarea::placeholder {
   .main-form__container {
     display: flex;
     justify-content: space-between;
-    margin: auto auto 48px auto;
+    margin: auto auto 43px auto;
     width: 100%;
   }
 
@@ -334,12 +341,14 @@ textarea::placeholder {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 0 48px 0;
+    margin: auto;
   }
 
   .main-form__place {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 0 42px 0;
+    margin: auto auto 32px auto;
   }
 
   .preview-form__lettering-inner {
@@ -362,6 +371,7 @@ textarea::placeholder {
     position: relative;
     grid-column: 1 / 3;
     min-height: 30px;
+    margin-bottom:24px;
   }
 
   .main-form__title--decor {
@@ -411,21 +421,31 @@ textarea::placeholder {
   .main-form__container {
     grid-template-columns: 480px 480px;
     margin-bottom: 56px;
+    width: 960px;
   }
 
   .main-form__impression {
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 56px;
+    margin-bottom: 10px;
 
     .main-form__title-center {
       grid-column: 1 / 4;
+      margin-bottom: 35px;
     }
+  }
+
+  .main-form__item {
+    width: 960px;
+  }
+
+  .main-form__title {
+    max-width: 320px;
   }
 
   .main-form__place {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 56px;
+    margin-bottom: 106px;
 
     .main-form__title-center {
       grid-column: 1 / 5;
