@@ -4,6 +4,7 @@
 
 .media__item {
   list-style: none;
+  margin-bottom: 48px;
 }
 
 .media__tagline {
@@ -13,12 +14,17 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 25px;
+}
+
+.media__tagline-video {
+  margin-top: 0;
 }
 
 .media__list {
   width: 87%;
   padding: 0;
-  margin: auto;
+  margin: 65px auto auto auto;
 }
 
 .media__meta-wrapper {
@@ -42,6 +48,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 0;
 }
 
 .media__author {
@@ -50,6 +57,7 @@
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  margin: 0 auto 14px auto;
 }
 
 .media-likes {
@@ -59,6 +67,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+  margin-left: 10px;
 }
 
 .media__icon {
@@ -81,11 +90,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 84%;
-    margin: 62px auto 58px auto;
+    margin: 92px auto 58px auto;
   }
 
   .media {
     margin-top: 62px;
+  }
+
+  .media__item{
+  margin-bottom: 0;
   }
 
   .media__tagline {
@@ -128,6 +141,7 @@
     padding-right: 20px;
     min-height: 80px;
     background-color: rgba(242, 242, 242, 1);
+    margin-top: -4px;
   }
 
   .media__item:nth-of-type(3) .media__meta-wrapper {
@@ -137,7 +151,7 @@
   .media__video {
     width: 84%;
     height: auto;
-    margin: 70px auto 40px auto;
+    margin: 90px auto 40px auto;
   }
 }
 
@@ -150,7 +164,7 @@
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 400px 267px;
     width: 1200px;
-    margin: 69px auto 62px auto;
+    margin: 99px auto 62px auto;
   }
 
   .media__item--large-format {
