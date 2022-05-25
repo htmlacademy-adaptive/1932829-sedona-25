@@ -32,6 +32,7 @@
 .advantages__header {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
   text-align: center;
   font-style: normal;
   font-weight: 400;
@@ -56,8 +57,11 @@
 .advantages__image-devils-bridge {
   background-image: url("../img/devils-brige-mobile.jpg");
   height: 260px;
+  width: 100%;
   background-size: cover;
   background-position: 50% 50%;
+  margin-bottom: 0;
+  order: 2;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/devils-brige-mobile-x2.jpg");
@@ -74,13 +78,13 @@
 .advantages__content--secondary {
   color: rgba(0, 0, 0, 1);
   background-color: rgba(238, 238, 238, 1);
-  padding: 24px 45px 24px 18px;
+  padding: 24px 45px 10px 18px;
   box-sizing: border-box;
 }
 
 .advantages__title {
   padding: 0;
-  margin: 0;
+  margin: 0 0 13px 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -111,8 +115,17 @@
   padding: 0;
 }
 
+.advantages__item--illustration-first {
+  display: flex;
+  flex-flow: wrap;
+}
+
 .advantages__item--illustration .advantages__content {
   padding: 40px 20px;
+}
+
+.advantages__item--illustration-first .advantages__content {
+  padding-bottom: 22px;
 }
 
 .advantages__decor {
@@ -124,8 +137,15 @@
 }
 
 .advantages__item--illustration-second .advantages__content {
-  padding-top: 54px;
+  padding-top: 74px;
+  padding-bottom: 33px;
 }
+
+.advantages__separator {
+  display: block;
+  height: 2px;
+}
+
 
 @media (min-width: @tablet-width) {
   .advantages {
