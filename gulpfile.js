@@ -51,7 +51,7 @@ export const html = () => {
 
 //IMAGES
 export const images = () => {
-  return gulp.src('sourse/img/**/*.(jpg,png')
+  return gulp.src('sourse/img/**/*{jpg,png}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
   }
@@ -59,7 +59,7 @@ export const images = () => {
 
 //WebP
 export const createWebp = () => {
-  return gulp.src('sourse/img/**/*.(jpg,png')
+  return gulp.src('sourse/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {},
   }))
@@ -67,10 +67,11 @@ export const createWebp = () => {
 }
 
 //SVG
-const svg = () => {
+const svg = (done) => {
   gulp.src('sourse/img/**/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('build.img'));
+    .pipe(gulp.dest('build.img'))
+    done()
 }
 
 const sprite = () => {
@@ -111,17 +112,15 @@ export default gulp.series(
   html, styles, server, watcher
 );
 
-//export const build = gulp.series(
-  //clean,
-  //copy,
-  //надо добавить
-  //optomizeImages,
-  //gulp.parallel (
-    //styles,
-    //надо добавить в идеале
-    //scripts,
-    //createWebp,
-    //spriteSvg,
-    //optimizeSvg
-  //),
-//);
+export const build = gulp.series(
+  clean,
+  copy,
+  gulp.parallel (
+    html,
+    images,
+    svg,
+    styles,
+    createWebp,
+    sprite,
+    ),
+);
