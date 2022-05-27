@@ -1,3 +1,7 @@
+.modal-closed {
+  display: none;
+}
+
 .error__wrapper {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -10,14 +14,16 @@
 }
 
 .error__title {
+  margin-top: 0;
+  margin-bottom: 25px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 18px;
   text-align: center;
 }
 
 .error__text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
@@ -28,15 +34,15 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  margin: auto;
-  padding: 45px 42px 35px 41px;
+  margin: 116px auto auto auto;
+  padding: 47px 47px 35px 48px;
   background-color: #ffffff;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
 }
 
 .error__button {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
@@ -44,7 +50,7 @@
   background-color: rgba(129, 179, 210, 1);
   color: rgba(255, 255, 255, 1);
   border: none;
-  width: 67%;
+  width: 83%;
   max-width: 272px;
   height: 58px;
   margin: auto;
@@ -54,5 +60,29 @@
   .error__modal {
     width: 400px;
     height: 347px;
+    margin-top: 283px;
+  }
+
+  .error__title {
+    margin: 0 30px 25px 30px;
+    font-size: 30px;
+  }
+
+  .error__text {
+    margin-bottom: 45px;
+  }
+
+  .error__button {
+    width: 88%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .error__title {
+    margin-bottom: 32px;
+  }
+
+  .error__text {
+    margin-bottom: 48px;
   }
 }
