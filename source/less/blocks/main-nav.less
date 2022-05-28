@@ -63,14 +63,28 @@
   position: absolute;
   top: 17px;
   right: 17px;
-  background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat;
   padding: 0;
   border: 0;
   width: 23px;
   height: 22px;
   margin-left: auto;
   cursor: pointer;
+}
+
+.main-nav--opened .main-nav__toggle-menu {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle-cross {
+  display: none;
+}
+
+.main-nav__toggle:hover {
+  opacity: 60%;
+}
+
+.main-nav__toggle:active {
+  opacity: 30%;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -105,11 +119,6 @@
     display: flex;
     margin: 20px 0;
   }
-
-  .main-nav--opened .main-nav__toggle {
-    display: none;
-  }
-
 
   .main-nav__list {
     display: flex;
