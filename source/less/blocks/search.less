@@ -1,6 +1,6 @@
 .search {
   text-align: center;
-  padding: 38px 18px 49px 18px;
+  padding: 42px 10px 49px 10px;
 }
 
 .search__title {
@@ -11,6 +11,8 @@
   line-height: 26px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .search__subtitle {
@@ -21,6 +23,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: rgba(51, 51, 51, 1);
+  margin: 17px 12px 32px 12px;
 }
 
 .search__button {
@@ -63,9 +66,25 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 26px;
+    margin-bottom: 28px;
   }
 
   .search__subtitle {
-    margin-bottom: 54px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search {
+    margin-top: 57px;
+    margin-bottom: 66px;
+  }
+
+  .search__title {
+    margin-bottom: 32px;
+  }
+
+  .search__subtitle {
+    margin-bottom: 48px;
   }
 }

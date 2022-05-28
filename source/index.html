@@ -115,9 +115,17 @@
     </symbol>
     <symbol viewBox="0 0 768 37" id="advantages-decor">
       <g id="surface1">
-        <path d="M 0 0 L 386 0 L 386 37.226562 Z M 0 0 " fill="white"/>
-        <path d="M 772 0 L 386 0 L 386 37.226562 Z M 772 0 "fill="white"/>
+        <path d="M 0 0 L 386 0 L 386 37.226562 Z M 0 0" fill="white"/>
+        <path d="M 772 0 L 386 0 L 386 37.226562 Z M 772 0" fill="white"/>
         </g>
+    </symbol>
+    <symbol viewBox="0 0 23 23" id="icon-cross">
+      <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+    </symbol>
+    <symbol viewBox="0 0 23 22" id="icon-menu">
+      <path d="M22.9 0H0V4H22.9V0Z" />
+      <path d="M22.9 9H0V13H22.9V9Z" />
+      <path d="M22.9 18H0V22H22.9V18Z"/>
     </symbol>
   </svg>
   <div class="wrapper">
@@ -127,8 +135,16 @@
         <use xlink:href="#logo-main"></use>
       </svg>
     </a>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle main-nav__toggle-cross" type="button">
+        <svg width="23" height="23" fill="white" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#icon-cross"></use>
+        </svg>
+      </button>
+      <button class="main-nav__toggle main-nav__toggle-menu" type="button">
+        <svg width="23" height="22" fill="#81B3D2" viewBox="0 0 23 22"  xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
         <span class="visually-hidden">Кнопка меню</span>
       </button>
       <div class="main-nav__wrapper">
@@ -145,7 +161,7 @@
             <a class="main-nav__link" href="form.html">Форма Отзыва</a>
           </li>
           <li class="main-nav__item main-nav__shadow">
-            <a class="main-nav__link" href="#">HTML ACADEMY</a>
+            <a class="main-nav__link" href="form-sent.html">HTML ACADEMY</a>
           </li>
         </ul>
       </div>
@@ -192,7 +208,7 @@
             <ul class="features">
               <li class="features__item">
                 <span class="features__logo features__logo--house">
-                  <svg class="features__vector" max-width="80" viewBox="0 0 75 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="features__vector"  viewBox="0 0 75 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#logo-house"></use>
                     </svg>
                 </span>
@@ -203,7 +219,7 @@
               </li>
               <li class="features__item">
                 <span class="features__logo features__logo--food">
-                  <svg class="features__vector" max-width="80" viewBox="0 0 76 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="features__vector"  viewBox="0 0 76 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#logo-food"></use>
                   </svg>
                 </span>
@@ -214,7 +230,7 @@
               </li>
               <li class="features__item">
                 <span class="features__logo features__logo--gift">
-                  <svg class="features__vector" max-width="80" viewBox="0 0 64 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="features__vector" viewBox="0 0 64 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#logo-gift"></use>
                   </svg>
                 </span>
@@ -275,6 +291,7 @@
       <a class="search__button" href="#">Найти Гостиницу</a>
     </section>
     <div class="map">
+      <span class="map__point"></span>
     </div>
   </main>
   <footer class="main-footer">

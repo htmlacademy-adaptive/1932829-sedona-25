@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+.media__item:not(:last-child) {
+  margin-bottom: 48px;
+}
+
 .media__tagline {
   font-style: normal;
   font-weight: 700;
@@ -13,12 +17,21 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 27px;
+}
+
+.media__image-photo {
+  width: 100%;
+}
+
+.media__tagline-video {
+  margin-top: 0;
 }
 
 .media__list {
   width: 87%;
   padding: 0;
-  margin: auto;
+  margin: 65px auto 40px auto;
 }
 
 .media__meta-wrapper {
@@ -26,7 +39,8 @@
 }
 
 .media__text {
-  margin-bottom: 28px;
+  width: 85%;
+  margin: auto auto 37px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -42,6 +56,8 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 0;
+  margin-top: 12px;
 }
 
 .media__author {
@@ -50,6 +66,7 @@
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  margin: 0 auto 14px auto;
 }
 
 .media-likes {
@@ -59,6 +76,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+  margin-left: 10px;
 }
 
 .media__icon {
@@ -81,11 +99,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 84%;
-    margin: 62px auto 58px auto;
+    margin: 92px auto 58px auto;
   }
 
   .media {
     margin-top: 62px;
+  }
+
+  .media__item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .media__tagline {
@@ -117,6 +139,10 @@
     text-align: left;
   }
 
+  .media-likes {
+    margin-left: 5px;
+  }
+
   .media__like-wrapper {
     margin-top: 28px;
   }
@@ -128,6 +154,7 @@
     padding-right: 20px;
     min-height: 80px;
     background-color: rgba(242, 242, 242, 1);
+    margin-top: -4px;
   }
 
   .media__item:nth-of-type(3) .media__meta-wrapper {
@@ -137,20 +164,20 @@
   .media__video {
     width: 84%;
     height: auto;
-    margin: 70px auto 40px auto;
+    margin: 90px auto 50px auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .media {
-    margin-top: 104px;
+    margin-top: 95px;
   }
 
   .media__list {
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 400px 267px;
     width: 1200px;
-    margin: 69px auto 62px auto;
+    margin: 90px auto 60px auto;
   }
 
   .media__item--large-format {
@@ -173,6 +200,10 @@
 
   .media__author {
     color: rgba(255, 255, 255, 1);
+  }
+
+  .media__tagline {
+    margin-bottom: 32px;
   }
 
   .media-likes {

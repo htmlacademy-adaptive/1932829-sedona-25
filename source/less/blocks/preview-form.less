@@ -1,5 +1,5 @@
 .preview-form {
-  position: relatives;
+  position: relative;
 }
 
 .preview-form__image::before {
@@ -45,11 +45,11 @@
   max-width: 87%;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   text-align: center;
   text-transform: uppercase;
   color: #333333;
-  margin: 24px auto 28px auto;
+  margin: 24px auto 10px auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -69,11 +69,10 @@
   }
 
   .preview-form {
-    margin-bottom: 102px;
+    margin-bottom: 107px;
   }
 
   .preview-form__decor {
-    transform: translate(-50%, 0%);
     top: 290px;
   }
 
@@ -85,7 +84,7 @@
 
   .preview-form__subtitle {
     width: 435px;
-    margin: 20px auto 102px auto;
+    margin: 22px auto 102px auto;
   }
 }
 
@@ -96,6 +95,7 @@
 
   .preview-form__decor {
     top: 300px;
+    transform: translate(-50%, -100%);
   }
 
   .preview-form__image {
@@ -107,7 +107,16 @@
     margin: auto;
   }
 
+  .preview-form__lettering-inner {
+    margin-top: 101px;
+  }
+
   .preview-form__title {
-    margin-top: 115px;
+    margin-top: 114px;
+  }
+
+  .preview-form__subtitle {
+    margin-top: 30px;
+    margin-bottom: 70px;
   }
 }

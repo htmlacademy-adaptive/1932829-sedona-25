@@ -1,10 +1,9 @@
 .main-footer {
   text-align: center;
-  padding: 28px 20px 23px 20px;
+  padding: 29px 20px 23px 20px;
 }
 
 .main-footer__hashtag {
-  margin: 33px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -13,6 +12,7 @@
   text-align: center;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  margin-bottom: 33px;
 }
 
 .main-footer__footer-development {
@@ -44,24 +44,30 @@
   .main-footer {
     display: flex;
     justify-content: space-between;
-    padding: 36px 60px 36px 45px;
+    padding: 26px 60px 36px 60px;
   }
 
   .main-footer__hashtag {
     margin: 0;
     padding-top: 11px;
   }
+
+  .main-footer__footer-development {
+    display: block;
+    padding-bottom: 10px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-footer {
     width: 1200px;
-    padding: 36px 100px;
+    padding: 36px 120px;
     margin: auto;
     box-sizing: border-box;
   }
 
   .main-footer__hashtag {
     margin-top: 12px;
+    padding: 0;
   }
 }

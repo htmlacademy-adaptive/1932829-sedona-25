@@ -195,13 +195,14 @@ textarea::placeholder {
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
   border-style: none;
+  margin-bottom: 8px;
 }
 
-.main-form__impression label:not(:last-child) {
+.main-form__impression-wrapper label:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.main-form__place label:not(:last-child) {
+.main-form__place-wrapper label:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -220,6 +221,15 @@ textarea::placeholder {
   border-style: none;
 }
 
+.main-form__send:hover {
+  background-color: rgba(102, 158, 192, 1);
+}
+
+.main-form__send:active {
+  background-color: rgba(84, 150, 189, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .main-form__notes {
   font-style: normal;
   font-weight: 400;
@@ -228,16 +238,18 @@ textarea::placeholder {
   text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
   text-align: right;
+  margin-top: 5px;
+  margin-bottom: 21px;
 }
 
 .main-form__name-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px 0;
 }
 
 .main-form__contact-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 19px 0;
 }
 
 .main-form__name-item label {
@@ -273,10 +285,16 @@ textarea::placeholder {
   text-align: center;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  margin-top: 21px;
+  margin-bottom: 20px;
+}
+
+.main-form__title-name {
+  margin-top: 16px;
 }
 
 .main-form__textarea {
-  padding: 16px;
+  padding: 16px 16px 25px;
   width: 100%;
   background-color: rgba(242, 242, 242, 1);
   font-style: normal;
@@ -290,13 +308,22 @@ textarea::placeholder {
 
 .main-form__send-wrapper {
   display: block;
-  margin-top: 56px;
+  margin-top: 58px;
   width: 100%;
+}
+
+.main-form__place {
+  margin-bottom: 5px;
 }
 
 @media (min-width: @tablet-width) {
   .main-form {
-    margin: auto auto 64px auto;
+    width: 85%;
+    margin: auto auto 68px auto;
+  }
+
+  .main-form__place {
+    margin-bottom: 25px;
   }
 
   .form-separator {
@@ -319,27 +346,46 @@ textarea::placeholder {
     margin: 0 0 28px 0;
   }
 
+  .main-form__title-name {
+    margin-left: 40px;
+  }
+
+  .main-form__title-contact {
+    position: relative;
+    right: 23px;
+  }
+
   .main-form__container {
     display: flex;
     justify-content: space-between;
-    margin: auto auto 48px auto;
+    margin: auto auto 38px auto;
     width: 100%;
   }
 
   .main-form__container .main-form__item {
     width: 43%;
+    margin: 0;
   }
 
   .main-form__impression {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 0 48px 0;
+    padding: 0 0 47px 0;
+    margin: auto;
   }
 
-  .main-form__place {
+  .main-form__impression-wrapper {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    width: 88%;
+    margin: auto;
+  }
+
+  .main-form__place-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 0 42px 0;
+    grid-column-gap: 30px;
+    width: 74%;
+    margin: auto;
   }
 
   .preview-form__lettering-inner {
@@ -349,12 +395,13 @@ textarea::placeholder {
 
   .main-form__textarea {
     height: 160px;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
   }
 
   .main-form__notes {
     font-size: 14px;
     line-height: 21px;
+    margin-top: 21px;
   }
 
   .main-form__title-center {
@@ -362,6 +409,7 @@ textarea::placeholder {
     position: relative;
     grid-column: 1 / 3;
     min-height: 30px;
+    margin-bottom: 26px;
   }
 
   .main-form__title--decor {
@@ -378,6 +426,7 @@ textarea::placeholder {
 
   .main-form__send {
     margin: 0;
+    padding: 18px 54px 13px 52px;
   }
 
   .main-form__item {
@@ -410,26 +459,78 @@ textarea::placeholder {
 @media (min-width: @desktop-width) {
   .main-form__container {
     grid-template-columns: 480px 480px;
-    margin-bottom: 56px;
+    margin-bottom: 47px;
+    width: 960px;
+  }
+
+  .main-form {
+    margin-bottom: 54px;
   }
 
   .main-form__impression {
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 56px;
+    margin-bottom: 13px;
 
     .main-form__title-center {
       grid-column: 1 / 4;
+      margin-bottom: 35px;
     }
   }
 
+  .main-form__send {
+    padding: 18px 84px 13px 82px;
+  }
+
+  .main-form__item {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-form__container .main-form__item-name {
+    width: 45%;
+  }
+
+  .main-form__container .main-form__item-contact {
+    width: 43%;
+  }
+
+  .main-form__title {
+    max-width: 320px;
+  }
+
   .main-form__place {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 56px;
+    margin-bottom: 77px;
 
     .main-form__title-center {
       grid-column: 1 / 5;
     }
+  }
+
+  .main-form__title-name {
+    margin: auto 105px 28px auto;
+    text-align: right;
+  }
+
+  .main-form__title-contact {
+    margin-left: 40px;
+  }
+
+  .main-form__notes {
+    margin-top: 25px;
+  }
+
+  .main-form__impression-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 60px;
+    width: 90%;
+  }
+
+  .main-form__place-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    width: 90%;
+    margin-top: 55px;
   }
 
   .main-form__title--decor::after {
@@ -442,12 +543,12 @@ textarea::placeholder {
 
   .main-form__textarea {
     display: block;
-    width: 64%;
-    margin: auto auto 48px auto;
+    width: 80%;
+    margin: auto auto 45px auto;
   }
 
   .main-form__send-wrapper {
-    width: 64%;
+    width: 75%;
     margin: auto;
   }
 }
