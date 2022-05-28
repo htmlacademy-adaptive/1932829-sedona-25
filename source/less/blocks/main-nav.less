@@ -68,6 +68,7 @@
   width: 23px;
   height: 22px;
   margin-left: auto;
+  opacity: 100%;
   cursor: pointer;
 }
 
@@ -89,11 +90,9 @@
 
 .main-nav--opened .main-nav__toggle {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0);
   right: 20px;
   top: 17px;
-  background-image: url("../img/icon-cross.svg");
-  background-color: rgba(129, 179, 210, 0);
-  background-repeat: no-repeat;
   padding: 0;
   border: 0;
   width: 22px;
@@ -118,6 +117,10 @@
   .main-nav--closed .main-nav__wrapper {
     display: flex;
     margin: 20px 0;
+  }
+
+  .main-nav__toggle-cross {
+    display: none;
   }
 
   .main-nav__list {
