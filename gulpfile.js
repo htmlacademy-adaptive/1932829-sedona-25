@@ -90,6 +90,7 @@ const sprite = () => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/img/**/*.{jpg,png,svg}').on('change', browser.reload);
 }
 
 const clean = () => {
@@ -100,11 +101,13 @@ const copy = (done) => {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/img/**/*.webp',
-    'source/*.html'
+    'source/*.html',
+    'source/img/**/*.{jpg,png,svg}'
   ], {
     base: 'source'
   })
     .pipe(gulp.dest('build'))
+    done();
 }
 
 
