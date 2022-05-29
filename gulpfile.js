@@ -10,7 +10,6 @@ import htmlmin from 'gulp-html-minifier';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import { config } from 'process';
 import rename from 'gulp-rename';
 
 // Styles
@@ -41,29 +40,39 @@ const server = (done) => {
   done();
 }
 
+// Reload
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 //HTML
 
 export const html = () => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin({collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin({collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 //IMAGES
-export const images = () => {
-  return gulp.src('source/img/**/*{jpg,png}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
-  }
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
+}
 
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
 
 //WebP
 export const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh({
-    webp: {},
-  }))
-  .pipe(gulp.dest('build/img'));
+    .pipe(squoosh({
+      webp: {},
+    }))
+    .pipe(gulp.dest('build/img'));
 }
 
 //SVG
@@ -71,26 +80,17 @@ const svg = (done) => {
   gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
-    done()
+  done()
 }
 
 const sprite = () => {
   return gulp.src("source/img/*.svg")
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlinesvg:true
-}))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
-  }
-
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-  gulp.watch('source/img/**/*.{jpg,png,svg}').on('change', browser.reload);
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlinesvg:true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 }
 
 const clean = () => {
@@ -100,30 +100,49 @@ const clean = () => {
 const copy = (done) => {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
-    'source/img/**/*.webp',
     'source/*.html',
-    'source/img/**/*.{jpg,png,svg}'
   ], {
     base: 'source'
   })
     .pipe(gulp.dest('build'))
-    done();
+  done();
+}
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch('source/less/**/*.less', gulp.series(styles, reload));
+  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/img/**/*.*', gulp.series(copyImages, reload));
 }
 
 
 export default gulp.series(
-  html, styles, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
+
 
 export const build = gulp.series(
   clean,
   copy,
-  gulp.parallel (
-    html,
-    images,
-    svg,
+  optimizeImages,
+  gulp.parallel(
     styles,
-    createWebp,
+    html,
+    svg,
     sprite,
-    ),
+    createWebp
+  ),
 );
