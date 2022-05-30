@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="./css/style.css" type='text/css'>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsans.woff" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font">
 </head>
 <body class="page__body">
   <svg style="display: none">
@@ -129,34 +133,32 @@
     </symbol>
   </svg>
   <div class="wrapper">
-  <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <svg class="main-header__logo-vector" width="185" height="96" viewBox="0 0 185 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#logo-main"></use>
-      </svg>
-    </a>
-    <nav class="main-nav main-nav--opened main-nav--nojs">
-      <button class="main-nav__toggle main-nav__toggle-cross" type="button">
-        <svg width="23" height="23" fill="white" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="#icon-cross"></use>
-        </svg>
-      </button>
-      <button class="main-nav__toggle main-nav__toggle-menu" type="button">
-        <svg width="23" height="22" fill="#81B3D2" viewBox="0 0 23 22"  xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="#icon-menu"></use>
-        </svg>
-        <span class="visually-hidden">Кнопка меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list left-list">
+    <header class="main-header">
+      <nav class="main-nav main-nav--nojs">
+        <!-- main-nav--opened - cостояние открытого меню
+             main-nav--closed  - состояние закрытого меню
+             main-nav--nojs - состояние с отключенным js
+            -->
+        <button class="main-nav__toggle main-nav__toggle-cross" type="button">
+          <span class="visually-hidden">Кнопка закрытия меню</span>
+          <svg width="23" height="23" fill="white" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-cross"></use>
+          </svg>
+        </button>
+        <button class="main-nav__toggle main-nav__toggle-menu" type="button">
+          <span class="visually-hidden">Кнопка меню</span>
+          <svg width="23" height="22" fill="#81B3D2" viewBox="0 0 23 22"  xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+          <span class="visually-hidden">Кнопка меню</span>
+        </button>
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
-        </ul>
-        <ul class="main-nav__list right-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Форма Отзыва</a>
           </li>
@@ -164,9 +166,14 @@
             <a class="main-nav__link" href="form-sent.html">HTML ACADEMY</a>
           </li>
         </ul>
-      </div>
-    </nav>
-  </header>
+      </nav>
+      <a class="main-header__logo" href="index.html">
+        <span class="visually-hidden">Логотип сайта</span>
+        <svg width="185" height="96" viewBox="0 0 185 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#logo-main"></use>
+        </svg>
+      </a>
+    </header>
   <main class="main-container">
     <section class="preview">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
@@ -298,6 +305,7 @@
     <div class="main-footer__hashtag">#visitSEDONA</div>
     <ul class="social">
       <li class="social__item">
+        <span class="visually-hidden">Ссылка на аккаунт Вконтакте</span>
         <a class="social__link social__link--vkontakte" href="#">
           <svg class="social__link-vector" width="24" height="14" viewBox="0 0 24 14" fill="white" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#logo-vkontakte"></use>
@@ -305,6 +313,7 @@
         </a>
       </li>
       <li class="social__item">
+        <span class="visually-hidden">Ссылка на аккаунт Телеграм</span>
         <a class="social__link social__link--telegram" href="#">
           <svg class="social__link-vector" width="21" height="18" viewBox="0 0 21 18" fill="white" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#logo-telegram"></use>
@@ -312,6 +321,7 @@
         </a>
       </li>
       <li class="social__item social__item--youtube">
+        <span class="visually-hidden">Ссылка на аккаунт Youtube</span>
         <a class="social__link social__link--youtube" href="#">
           <svg class="social__link-vector" width="20" height="14" viewBox="0 0 20 14" fill="white" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="#logo-youtube"></use>
@@ -320,6 +330,7 @@
       </li>
     </ul>
     <a class="main-footer__footer-development" href="#">
+      <span class="visually-hidden">Ссылка на сайт разработчика</span>
       Разработано
       <svg class="main-footer__footer-logo" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="#logo-development"></use>

@@ -122,7 +122,6 @@
 .main-form__name-item input {
   width: 100%;
   padding: 16px;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -184,7 +183,16 @@ input::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
+input::-moz-placeholder, :-moz-placeholder {
+  opacity: 1;
+}
+
 textarea::placeholder {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
 }
 

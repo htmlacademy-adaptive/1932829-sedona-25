@@ -6,7 +6,23 @@
   z-index: 2;
 }
 
-.main-nav--closed .main-nav__wrapper {
+.main-nav--nojs {
+  position: static;
+  height: 220px;
+  margin-bottom: 56px;
+}
+
+.main-nav--opened {
+  position: absolute;
+  z-index: 3;
+}
+
+.main-nav--closed {
+  position: static;
+  height: 56px;
+}
+
+.main-nav--closed .main-nav__list{
   display: none;
 }
 
@@ -22,12 +38,13 @@
 .main-nav__list {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .main-nav__item {
   list-style: none;
   background-color: rgba(129, 179, 210, 1);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -61,6 +78,7 @@
 
 .main-nav--closed .main-nav__toggle {
   position: absolute;
+  background-color: transparent;
   top: 17px;
   right: 17px;
   padding: 0;
@@ -70,6 +88,18 @@
   margin-left: auto;
   opacity: 100%;
   cursor: pointer;
+}
+
+.main-nav--nojs .main-nav__toggle-menu {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__toggle-cross {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle-cross {
+  display: none;
 }
 
 .main-nav--opened .main-nav__toggle-menu {
@@ -106,35 +136,54 @@
   .main-nav {
     display: flex;
     align-items: stretch;
+    height: 56px;
   }
 
-  .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  .main-nav--nojs {
+    margin-bottom: 0;
   }
 
-  .main-nav--closed .main-nav__wrapper {
-    display: flex;
-    margin: 20px 0;
+  .main-nav--nojs+.main-header__logo {
+    top: 0;
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: grid;
+  }
+
+  .main-nav--opened {
+    position: static;
+  }
+
+  .main-nav__list {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "col1 col2 logo col3 col4";
+    height: 56px;
+  }
+
+  .main-nav__list::before {
+    content: "";
+    display: block;
+    grid-area: logo;
+    width: 185px;
+    height: 56px;
   }
 
   .main-nav__toggle-cross {
     display: none;
   }
 
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-  }
-
   .main-nav__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     list-style: none;
     background-color: rgba(129, 179, 210, 0);
     box-shadow: none;
-  }
+    }
 
   .main-nav__link {
     margin: auto;
