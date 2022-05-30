@@ -2,9 +2,19 @@
   position: relative;
   justify-content: right;
   width: 100%;
-  height: 56px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-header::before {
+  display: block;
+  content: "";
+  overflow: hidden;
+}
+
+.main-header-flow {
+  height: 220px;
+  position: relative;
 }
 
 .main-header__logo {
@@ -13,16 +23,31 @@
   width: 185px;
   height: 96px;
   position: absolute;
+  top: 0;
   right: 50%;
   transform: translate(50%, 0);
   z-index: 2;
   cursor: pointer;
 }
 
+.main-nav--nojs + .main-header__logo {
+  top: 220px;
+}
+
 .main-header__logo-vector {
   position: absolute;
   right: 50%;
   transform: translate(50%, 0);
+}
+
+@media (min-width: @tablet-width) {
+  .main-header-flow {
+    height: 56px;
+  }
+
+  .main-nav--nojs + .main-header__logo {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
